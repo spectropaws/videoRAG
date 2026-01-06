@@ -1,0 +1,23 @@
+# docker-compose.yml
+version: '3.8'
+
+services:
+  video-rag:
+    build: .
+    container_name: video-rag
+    volumes:
+      - ./data:/app/data
+      - ./config:/app/config
+      - ./videos:/app/videos  # Mount your video files here
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    stdin_open: true
+    tty: true
+    working_dir: /app

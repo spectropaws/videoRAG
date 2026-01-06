@@ -1,0 +1,9 @@
+.python-version
+__pycache__/
+*/__pycache__/
+**/__pycache__/
+*.pyc
+data/
+linux-venv/
+venv/
+*.mp4

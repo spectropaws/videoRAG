@@ -1,0 +1,53 @@
+.
+├── config
+│   └── config.yaml
+├── data
+│   ├── audio
+│   │   ├── 2023-05-25 20-32-02.wav
+│   │   └── test.wav
+│   ├── models
+│   │   ├── llama-3.2-3b-instruct-q4_k_m.gguf
+│   │   ├── Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf
+│   │   ├── Meta-Llama-3.1-8B-Instruct-Q5_K_M.gguf
+│   │   └── Phi-3-mini-4k-instruct-Q4_K_M.gguf
+│   ├── transcripts
+│   │   ├── test_formatted.txt
+│   │   ├── test.json
+│   │   └── test.txt
+│   └── vector_db
+│       ├── 63521314-0565-48de-b2bc-6919928f159d
+│       │   ├── data_level0.bin
+│       │   ├── header.bin
+│       │   ├── length.bin
+│       │   └── link_lists.bin
+│       └── chroma.sqlite3
+├── docker-compose.cpu.yml
+├── docker-compose.yml
+├── Dockerfile
+├── LICENSE
+├── logs
+├── Makefile
+├── README.md
+├── requirements.txt
+├── scripts
+│   ├── docker_setup.sh
+│   ├── process_video.py
+│   └── query_system.py
+├── setup.py
+├── src
+│   ├── audio_extractor.py
+│   ├── __init__.py
+│   ├── init.py
+│   ├── rag_pipeline.py
+│   ├── transcription.py
+│   ├── utils
+│   │   ├── file_utils.py
+│   │   ├── __init__.py
+│   │   ├── init.py
+│   │   └── logging_config.py
+│   └── vector_database.py
+├── temp.txt
+├── test.mp4
+└── videos
+
+13 directories, 38 files

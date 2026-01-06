@@ -1,0 +1,57 @@
+# # Audio processing
+# ffmpeg-python>=0.2.0
+# librosa>=0.10.0
+# soundfile>=0.12.1
+# 
+# # Transcription and diarization
+# whisperx>=3.1.1
+# torch>=2.0.0
+# torchaudio>=2.0.0
+# 
+# # Vector database and embeddings
+# chromadb>=0.4.0
+# sentence-transformers>=2.2.2
+# langchain>=0.1.0
+# langchain-community>=0.0.10
+# 
+# # LLM inference
+# llama-cpp-python>=0.2.20
+# 
+# # Utilities
+# pydantic>=2.0.0
+# pyyaml>=6.0
+# click>=8.1.0
+# tqdm>=4.65.0
+# numpy>=1.24.0
+# pandas>=2.0.0
+
+
+# Audio processing
+ffmpeg-python
+librosa
+soundfile
+
+# Transcription and diarization
+whisperx
+torch
+torchaudio
+
+# Vector database and embeddings
+chromadb
+sentence-transformers
+langchain
+langchain-community
+
+# LLM inference
+llama-cpp-python
+
+# Utilities
+pydantic
+pyyaml
+click
+tqdm
+numpy
+pandas
+
+# Optional: GPU acceleration
+# torch-audio-cuda  # Uncomment if using CUDA

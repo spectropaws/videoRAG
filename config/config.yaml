@@ -1,0 +1,52 @@
+# Audio extraction settings
+audio:
+  sample_rate: 16000
+  format: "wav"
+  output_dir: "data/audio"
+
+# Transcription settings
+transcription:
+  model: "large-v3"
+  device: "cpu"  # or "cpu"
+  compute_type: "int8"  # or "int8", "float32"
+  batch_size: 16
+  output_dir: "data/transcripts"
+  language: "auto"  # or specific language code like "en"
+
+# Diarization settings
+diarization:
+  min_speakers: 1
+  max_speakers: 10
+  hf_token: ""  # Hugging Face token for pyannote models
+
+# Vector database settings
+vector_db:
+  collection_name: "video_transcripts"
+  embedding_model: "all-MiniLM-L6-v2"
+  chunk_size: 1000
+  chunk_overlap: 200
+  persist_directory: "data/vector_db"
+
+# LLM settings
+llm:
+  model_path: "data/models/Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf"
+  context_length: 4096
+  max_tokens: 512
+  temperature: 0.1
+  top_p: 0.95
+  n_ctx: 4096
+  n_threads: 4
+
+# RAG settings
+rag:
+  top_k: 5
+  score_threshold: 0.5
+  system_prompt: |
+    You are a helpful assistant that answers questions based on the provided context from video transcripts.
+    Use only the information from the context to answer questions. If the answer is not in the context, say so.
+    
+    Context: {context}
+    
+    Question: {question}
+    
+    Answer:

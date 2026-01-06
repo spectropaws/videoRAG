@@ -1,0 +1,16 @@
+# docker-compose.cpu.yml (for CPU-only)
+version: '3.8'
+
+services:
+  video-rag:
+    build: .
+    container_name: video-rag-cpu
+    volumes:
+      - ./data:/app/data
+      - ./config:/app/config
+      - ./videos:/app/videos
+    stdin_open: true
+    tty: true
+    working_dir: /app
+    environment:
+      - CUDA_VISIBLE_DEVICES=""
